@@ -12,9 +12,10 @@ const SERVER_URL = process.env.DOMAIN // Masalan: https://domain.uz yoki ngrok H
 const startServer = async () => {
   try {
     // 1. Bazaga ulanish (kerak bo'lsa izohdan ochasiz)
-    // await db.sequelize.authenticate()
-    // console.log(chalk.bgGreen(' Database connection is true '))
-    // await db.sequelize.sync({ alter: true })
+    await db.sequelize.authenticate()
+    
+    console.log(chalk.bgGreen(' Database connection is true '))
+    await db.sequelize.sync({ alter: true })
 
     // 2. Express serverni ishga tushirish
     app.listen(PORT, async () => {
