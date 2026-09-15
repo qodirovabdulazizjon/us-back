@@ -1,0 +1,32 @@
+{
+  "name": "auto-forward",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@telegram-apps/init-data-node": "^2.0.10",
+    "axios": "^1.20.0",
+    "chalk": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "grammy": "^1.46.0",
+    "input": "^1.0.1",
+    "node-cron": "^4.6.0",
+    "pg": "^8.23.0",
+    "pg-hstore": "^2.3.4",
+    "punycode": "^2.3.1",
+    "sequelize": "^6.37.8",
+    "telegram": "^2.26.22"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
