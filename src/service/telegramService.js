@@ -6,8 +6,8 @@ import { StringSession } from 'telegram/sessions/index.js';
 
 dotenv.config({ quiet: true });
 
-const API_ID = process.env.API_ID;
-const API_HASH = process.env.API_HASH;
+const API_ID = Number(process.env.API_ID || process.env.TELEGRAM_API_ID);
+const API_HASH = String(process.env.API_HASH || process.env.TELEGRAM_API_HASH);
 
 // Clientlar va aktiv taymerlar xaritasi (Map)
 const clientPool = new Map();
