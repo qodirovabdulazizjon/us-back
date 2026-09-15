@@ -9,7 +9,7 @@ dotenv.config({ quiet: true })
 const app = express()
 
 app.use(cors({
-  origin: 'https://userbot-front-msax4hlxi-qodirovabdulazizjongmailcoms-projects.vercel.app/', // Telegram Mini App va barcha manbalardan keladigan so'rovlarga ruxsat beradi
+  origin: 'https://userbot-front.vercel.app/', // Telegram Mini App va barcha manbalardan keladigan so'rovlarga ruxsat beradi
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
