@@ -16,8 +16,8 @@ const authClients = new Map()
 export const createClient = (sessionString = "") => {
   const client = new TelegramClient(
     new StringSession(sessionString),
-    Number(process.env.TELEGRAM_API_ID),
-    process.env.TELEGRAM_API_HASH,
+    Number(process.env.API_ID),
+    process.env.API_HASH,
     {
       connectionRetries: 3,
       requestRetries: 3,
