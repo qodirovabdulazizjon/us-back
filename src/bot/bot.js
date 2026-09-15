@@ -4,7 +4,7 @@ import dotenv from 'dotenv/config'
 import { findOrCreateUser, getUserSessions } from '../service/bot.service.js'
 
 const bot = new Bot (process.env.BOT_TOKEN)
-const url = 'https://userbot-front.vercel.app/'
+const url = 'https://userbot-front-git-main-qodirovabdulazizjongmailcoms-projects.vercel.app/'
 
 bot.chatType('private').command('start', async(ctx) => {
   await findOrCreateUser(ctx.from)

@@ -25,6 +25,7 @@ const startServer = async () => {
       if (SERVER_URL) {
         const webhookUrl = `${SERVER_URL}/telegram-webhook/${process.env.BOT_TOKEN}`
         await bot.api.setWebhook(webhookUrl)
+        // bot.start()
         console.log(chalk.blue(`🔗 Webhook muvaffaqiyatli o'rnatildi: ${webhookUrl}`))
       } else {
         console.log(chalk.yellow(`⚠️ SERVER_URL topilmadi! Webhook o'rnatilmadi.`))
