@@ -1,6 +1,6 @@
 import app from "./src/app.js"
 import bot from "./src/bot/bot.js"
-// import db from "./src/models/index.js"
+import db from "./src/models/index.js"
 import chalk from "chalk"
 import dotenv from "dotenv"
 
@@ -13,7 +13,7 @@ const startServer = async () => {
   try {
     // 1. Bazaga ulanish (kerak bo'lsa izohdan ochasiz)
     await db.sequelize.authenticate()
-    
+
     console.log(chalk.bgGreen(' Database connection is true '))
     await db.sequelize.sync({ alter: true })
 
