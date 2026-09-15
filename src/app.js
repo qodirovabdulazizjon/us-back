@@ -2,6 +2,7 @@ import express from 'express'
 import bot from './bot/bot.js'
 import { webhookCallback } from "grammy"
 import dotenv from 'dotenv'
+import cors from 'cors'
 
 dotenv.config({ quiet: true })
 
