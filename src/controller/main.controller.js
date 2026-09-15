@@ -3,6 +3,8 @@ import { sendMessage, startAutoSending, stopAutoSending} from '../service/telegr
 
 export const getUserSessions = async(req, res) => {
 try {
+  console.log(req.body);
+  
   const userId = req.query.userId
   
   const sessions = await db.session.findAll({

@@ -9,7 +9,7 @@ dotenv.config({ quiet: true })
 const app = express()
 
 app.use(cors({
-  origin: 'https://userbot-front.vercel.app/', // Telegram Mini App va barcha manbalardan keladigan so'rovlarga ruxsat beradi
+  origin: '*', // Telegram Mini App va barcha manbalardan keladigan so'rovlarga ruxsat beradi
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -24,9 +24,9 @@ import mainRoute from './routes/main.routes.js'
 app.use('/api/v1/auth', authRoute)
 app.use('/api/v1/', mainRoute)
 
-app.get('/', (req, res) => {
-  res.status(200).json({message: 'Hello worlld'})
-})
+// app.get('/', (req, res) => {
+//   res.status(200).json({message: 'Hello worlld'})
+// })
 
 // 3. Webhook callback (Endi req.body mavjud bo'ladi)
 const webhookPath = `/telegram-webhook/${process.env.BOT_TOKEN}`
