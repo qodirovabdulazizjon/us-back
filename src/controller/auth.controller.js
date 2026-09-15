@@ -1,6 +1,8 @@
 import { Api } from 'telegram'
 import { getOrClient, clearAuthClient } from '../service/gramjs.service.js'
 import db from '../models/index.js'
+import dotenv from 'dotenv'
+dotenv.config({quiet: true})
 
 const cleanPhoneNumber = (phone) => String(phone).replace(/\D/g, "")
 
@@ -25,8 +27,8 @@ export const sendCode = async (req, res) => {
 
     const { phoneCodeHash } = await client.sendCode(
       {
-        apiId: Number(process.env.TELEGRAM_API_ID),
-        apiHash: process.env.TELEGRAM_API_HASH,
+        apiId: Number(process.env.API_ID),
+        apiHash: process.env.API_HASH,
       },
       formattedPhone
     )
